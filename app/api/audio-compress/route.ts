@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
 
         // Stream the compressed file to the response
         const stream = fs.createReadStream(outputFile);
-        stream.pipe(res);
+        // stream.pipe(res:NextResponse);
 
         // Clean up temporary files after streaming
         stream.on('close', () => {
