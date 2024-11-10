@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
           fs.unlinkSync(outputFile);
         });
       })
-      .on('error', (err) => {
+      .on('error', (err:any) => {
         console.error('Error compressing audio:', err);
         return NextResponse.json({ error: 'Audio compression failed' }, { status: 500 });
       });
