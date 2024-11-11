@@ -47,7 +47,7 @@ const socialFormats = {
 
 
         } catch (error) {
-            console.log(error)
+            console.log(error,"error while uploading image")
             alert("Failed to upload image");
         } finally{
             setIsUploading(false);

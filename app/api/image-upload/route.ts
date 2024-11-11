@@ -15,6 +15,7 @@ interface CloudinaryUploadResult {
 }
 
 export async function POST(request: NextRequest) {
+    console.log(request,"request for image upload")
     const {userId} = auth()
 
     if (!userId) {
